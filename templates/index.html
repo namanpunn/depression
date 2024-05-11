@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Healing Neuro</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71ee9d7f27.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="banner">
+        <nav> 
+            <div class="navbar">
+                <img src="{% static 'Images/Logo.png' %}" class="logo">
+                <ul>
+                    <li><a href="{% url 'index' %}">HOME</a></li>
+                    <li><a href="{% url 'survey' %}">DETECTION</a></li>
+                    <li><a href="{% url 'healing' %}">HEALING</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                </ul>
+                <img src="{% static 'Images/Profile pic.png' %}" class="user-bitmoji" onclick="toggleMenu()">
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <hr>
+                        <a href="{% url 'login' %}" class="sub-menu-link">
+                            <p>Login</p>
+                            <span></span>
+                        </a>
+                        <!-- Add other submenu items with appropriate URLs -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <h1>HEALING NEURO</h1>
+            <p>Listen to what your heart wants, not what your fears say.</p>
+        </div>
+        <div class="image-section">
+            <img src="{% static 'Images/Smiley face.png' %}">
+        </div>
+    </div>
+
+    <section class="text-box">
+        <h1>Welcome to Healing Neuro</h1>
+        <p>Welcome to Healing Neuro, where we harness the power of machine learning 
+            <br> technology to identify the individuals who may be experiencing depression.
+            <br> Through a thoughtfully crafted survey provided on our platform, we collect 
+            <br> textual responses to understand the emotional state and well-being of our users.
+            <br> Our mission is to provide a safe and supportive space for individuals to express
+            <br> themselves honestly and openly, knowing that their responses will be met with 
+            <br> understanding and compassion. 
+        </p>
+        <img src="{% static 'Images/Image1.png' %}">
+    </section>
+
+    <section class="footer">
+        <div class="row">
+            <div class="col">
+                <h3>Office</h3>
+ 
