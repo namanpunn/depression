@@ -16,7 +16,15 @@ def about(request):
     return render(request, 'about.html', {})
 
 def login(request):
-    return render(request, 'login.html', {})
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            auth_login(request, user)
+            return redirect('index')
+    return render(request, 'login.html')
+
 
 def survey(request):
     return render(request, 'survey.html', {})
